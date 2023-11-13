@@ -1,0 +1,65 @@
+.ticker {
+  width: 70%;
+  position: relative;
+  top: 5vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+  color: var(--text-color);
+  background-color: var(--cute-color);
+}
+.ticker::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 5vw;
+  height: 100%;
+  background: linear-gradient(to right, var(--tricker-color), transparent);
+  z-index: 9;
+}
+.ticker::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 5vw;
+  height: 100%;
+  background: linear-gradient(to left, var(--tricker-color), transparent);
+}
+.newsList {
+  display: flex;
+  align-items: center;
+  animation: ShowNewsList 40s linear infinite;
+  transition: animation-play-state 0.3s;
+}
+.newsList:hover {
+  animation-play-state: paused; /* إيقاف الانتقال عند تمرير الماوس (hover) على النص */
+}
+.newsList a {
+  width: (100% / 7);
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  color: #000;
+  white-space: nowrap; /* منع الأخبار من الانزلاق إلى سطر جديد */
+  margin-right: 100px; /* تأثير لإخفاء الأخبار خارج الحاوية في البداية */
+}
+
+@keyframes ShowNewsList {
+  0% {
+    transform: translateX(-63%);
+  }
+  100% {
+    transform: translateX(63%);
+  }
+}
+@media (max-width: 1350px) {
+  .ticker {
+    width: 85%;
+    margin: 20px auto;
+  }
+}

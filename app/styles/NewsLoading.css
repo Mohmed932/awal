@@ -1,0 +1,89 @@
+.main_LoadingSeven {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoadingSeven {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: 5vh;
+  padding: 20px;
+  background-color: var(--skeleton--background);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.LoadingSeven h1,
+.LoadingSeven p,
+.LoadingSeven span,
+.LoadingSeven div {
+  background-color: var(--skeleton--text);
+  height: 30px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.LoadingSeven h1 {
+  width: 85%;
+}
+.LoadingSeven span:nth-child(2) {
+  width: 25%;
+}
+.LoadingSeven span:nth-child(3) {
+  width: 45%;
+}
+.LoadingSeven div:nth-child(4) {
+  width: 95%;
+  height: 60vh;
+  background-color: var(--skeleton--text);
+}
+.LoadingSeven span:nth-child(5) {
+  width: 10%;
+}
+.LoadingSeven p {
+  width: 90%;
+}
+.LoadingSeven h1::before,
+.LoadingSeven p::before,
+.LoadingSeven span::before,
+.LoadingSeven div::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 100%;
+  background-color: var(--skeleton--animation);
+  animation: wave 1s ease-out infinite;
+}
+@media (max-width: 1350px) {
+  .LoadingSeven {
+    width: 80%;
+  }
+}
+@media (max-width: 1080px) {
+  .LoadingSeven {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .main_LoadingSeven {
+    width: 98%;
+  }
+  .LoadingSeven {
+    width: 100%;
+  }
+  .LoadingSeven div:nth-child(4) {
+    height: 30vh;
+    width: 95%;
+  }
+  .LoadingSeven h1,
+  .LoadingSeven p,
+  .LoadingSeven span,
+  .LoadingSeven div {
+    width: 95%;
+  }
+}
