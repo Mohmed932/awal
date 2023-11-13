@@ -1,5 +1,5 @@
 import Link from "next/link"
-import '../../styles/Sections.css'
+// import '../../styles/Sections.css'
 import { Suspense } from "react"
 
 const Sections = ({ Data }) => {

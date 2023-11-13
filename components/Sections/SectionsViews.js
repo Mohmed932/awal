@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Fragment } from "react"
-import '../../styles/SectionsViews.css'
+// import '../../styles/SectionsViews.css'
 
 const SectionsViews = ({ ViewsData }) => {
     const maiNewsViews = ViewsData.map(
