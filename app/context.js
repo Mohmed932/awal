@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 
 export const DataContext = createContext();
 
@@ -18,6 +18,7 @@ function dataReducer(state, action) {
 }
 
 export default function ThemeProvider({ children }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [state, dispatch] = useReducer(dataReducer, {
     status: "loading",
     data: null,
@@ -28,9 +29,10 @@ export default function ThemeProvider({ children }) {
     data: null,
     error: null,
   });
+  const contextValue = {dispatch, state, stateSearch, dispatchSearch ,isDarkMode, setIsDarkMode}
   return (
     <DataContext.Provider
-      value={{ dispatch, state, stateSearch, dispatchSearch }}
+      value={contextValue}
     >
       {children}
     </DataContext.Provider>

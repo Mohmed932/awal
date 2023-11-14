@@ -6,6 +6,9 @@ export const metadata = {
   title: "أول بأول- ناقل اخباري",
   description:
     "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
+    icons: {
+      icon:[{url:'/public/ios/16.png'}, new URL('/public/ios/16.png', 'http://localhost:3000')],
+    },
   metadataBase: new URL("https://www.awalbawl.online"),
   title: "أول بأول- ناقل اخباري",
   description:
@@ -17,7 +20,6 @@ export const metadata = {
     description:
       "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
     siteName: "اول بأول",
-    // images: res.more_details.largeImage,
     type: "website",
   },
 };

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState, memo, useContext } from "react";
+import  { useEffect, useRef, useState, memo, useContext } from "react";
 import "@/app/styles/Navbar.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
@@ -9,15 +9,14 @@ import { useRouter } from "next/navigation";
 import Search from "./Search";
 import { DataContext } from "@/app/context";
 
-const Navbar = memo(({ isDarkMode, setIsDarkMode }) => {
-  const { dispatchSearch } = useContext(DataContext);
+const Navbar = () => {
+  const { dispatchSearch,isDarkMode, setIsDarkMode } = useContext(DataContext);
   const [searchResult, setSearchResult] = useState("");
-  const [more, setmore] = useState(false);
   const [show, setshow] = useState(false);
+  const [more, setmore] = useState(false);
   const [searchItem, setsearchItem] = useState(false);
   const [phone, setphone] = useState(false);
   const inputValue = useRef();
-  //   const dispatch = useDispatch();
   const handelStorage = () => {
     setIsDarkMode(localStorage.getItem("isDarkMode") === "false");
   };
@@ -202,20 +201,11 @@ const Navbar = memo(({ isDarkMode, setIsDarkMode }) => {
         <a href="https://wa.me/+201064702174" alt="محمد محمود فؤاد محمد">
           للاعلان
         </a>
-        {isDarkMode ? (
-          <BsFillSunFill
-            className="mode_app"
-            onClick={() => {
-              setIsDarkMode(false);
-            }}
-          />
-        ) : (
-          <BsFillMoonFill className="mode_app" onClick={handelStorage} />
-        )}
+        {isDarkMode? <BsFillMoonFill onClick={handelStorage}/>: <BsFillSunFill onClick={handelStorage}/>}
       </div>
       {item}
     </header>
   );
-});
+}
 
 export default Navbar;
