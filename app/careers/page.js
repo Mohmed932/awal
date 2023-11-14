@@ -3,8 +3,8 @@
 // import { Fragment, Suspense } from "react";
 
 // const careers = async () => {
-//     const reqcareer = await fetch("https://serverawalbawl.vercel.app/news/career?page=1&limit=10");
-//     const rescareer = await reqcareer.json();
+// const reqcareer = await fetch("https://serverawalbawl.vercel.app/news/career?page=1&limit=10");
+// const rescareer = await reqcareer.json();
 //     const careerData = rescareer.newsData
 //     const reqcareerViews = await fetch("https://serverawalbawl.vercel.app/news/career/views");
 //     const rescareerViews = await reqcareerViews.json();
@@ -15,12 +15,10 @@
 // }
 
 // export default careers
-import React from 'react'
+import React from "react";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <div>page</div>;
+};
 
-export default page
+export default page;

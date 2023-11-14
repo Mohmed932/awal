@@ -1,5 +1,5 @@
 "use client";
-import  { useEffect, useRef, useState, memo, useContext } from "react";
+import { useEffect, useRef, useState, memo, useContext } from "react";
 import "@/app/styles/Navbar.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
@@ -10,7 +10,7 @@ import Search from "./Search";
 import { DataContext } from "@/app/context";
 
 const Navbar = () => {
-  const { dispatchSearch,isDarkMode, setIsDarkMode } = useContext(DataContext);
+  const { dispatchSearch, isDarkMode, setIsDarkMode } = useContext(DataContext);
   const [searchResult, setSearchResult] = useState("");
   const [show, setshow] = useState(false);
   const [more, setmore] = useState(false);
@@ -61,12 +61,7 @@ const Navbar = () => {
   const item = (
     <div className="Navbar_main">
       <div className="logo" onClick={() => navigate.push("/")}>
-        <h1>
-          <span>ا</span>ول
-        </h1>
-        <h1>
-          <span>ب</span>ا
-        </h1>
+        <h1>اول بأول</h1>
       </div>
       <div className="Navbar_item">
         <div className="Sidebar">
@@ -201,11 +196,15 @@ const Navbar = () => {
         <a href="https://wa.me/+201064702174" alt="محمد محمود فؤاد محمد">
           للاعلان
         </a>
-        {isDarkMode? <BsFillMoonFill onClick={handelStorage}/>: <BsFillSunFill onClick={handelStorage}/>}
+        {isDarkMode ? (
+          <BsFillMoonFill onClick={handelStorage} />
+        ) : (
+          <BsFillSunFill onClick={handelStorage} />
+        )}
       </div>
       {item}
     </header>
   );
-}
+};
 
 export default Navbar;

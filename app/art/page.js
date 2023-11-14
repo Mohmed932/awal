@@ -3,8 +3,8 @@
 // import { Fragment, Suspense } from "react";
 
 // const art = async () => {
-//     const reqArt = await fetch("https://serverawalbawl.vercel.app/news/art?page=1&limit=10");
-//     const resArt = await reqArt.json();
+// const reqArt = await fetch("https://serverawalbawl.vercel.app/news/art?page=1&limit=10");
+// const resArt = await reqArt.json();
 //     const ArtData = resArt.newsData
 //     const reqArtViews = await fetch("https://serverawalbawl.vercel.app/news/art/views");
 //     const resArtViews = await reqArtViews.json();
@@ -15,12 +15,10 @@
 // }
 
 // export default art
-import React from 'react'
+import React from "react";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <div>page</div>;
+};
 
-export default page
+export default page;

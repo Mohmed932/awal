@@ -1,6 +1,6 @@
 .Navbar {
   z-index: 7898;
-  height: 15vh;
+  /* height: 15vh; */
   background-color: var(--cute-color);
   box-shadow: #0000001a 0px 4px 12px;
 }
@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 10px;
+  /* background-color: yellowgreen; */
 }
 .icon_search {
   font-size: 20px;

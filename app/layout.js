@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import ThemeProvider from "./context";
 import "./globals.css";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Alexandria } from "next/font/google";
+import Footer from "@/components/Footer";
+const inter = Alexandria({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -12,10 +13,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      <body className={inter.className} >
-        <div className="dark-mode">
-          <Navbar/>
-          <ThemeProvider>{children}</ThemeProvider></div>
+      <body className={inter.className}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

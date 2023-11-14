@@ -1,0 +1,114 @@
+.NewsRelease {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.HiOutlineMail {
+  font-size: 200px;
+}
+.NewsRelease_sbscribe {
+  width: 70%;
+  height: 100%;
+  background-color: var(--cute-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NewsRelease_sbscribe_container {
+  width: 100%;
+  height: 6.5vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NewsRelease_sbscribe input,
+.NewsRelease_sbscribe button {
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 17px;
+  caret-color: var(--main-color);
+  background-color: #e8f0fe;
+  width: 60%;
+  max-height: 100%;
+  box-shadow: var(--shadow-color);
+}
+.NewsRelease_sbscribe button {
+  width: 15%;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Mail {
+  position: fixed;
+  top: 15vh;
+  right: -50vw;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 0 15px;
+  height: 8vh;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-bottom: 5px solid #f00;
+  z-index: 879;
+  font-weight: 100;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+}
+@media (max-width: 1080px) {
+  .NewsRelease_sbscribe {
+    width: 95%;
+  }
+}
+@media (max-width: 767px) {
+  .NewsRelease {
+    height: 20vh;
+  }
+  .NewsRelease_sbscribe input,
+  .NewsRelease_sbscribe button {
+    padding: 10px;
+    font-size: 15px;
+    height: 100%;
+  }
+  .NewsRelease_sbscribe button {
+    min-width: 25%;
+  }
+  .NewsRelease_sbscribe h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .NewsRelease p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    right: 20vw;
+    color: rgb(59, 0, 0);
+  }
+}
+@media (max-width: 380px) {
+  .NewsRelease {
+    height: 20vh;
+  }
+  .NewsRelease_sbscribe input,
+  .NewsRelease_sbscribe button {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .NewsRelease_sbscribe button {
+    min-width: 30%;
+  }
+}
