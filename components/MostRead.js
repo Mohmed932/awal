@@ -9,6 +9,7 @@ import Link from "next/link";
 
 const MostRead = () => {
   const [data, setData] = useState(null);
+  const [slidesToShow, setSlidesToShow] = useState(3);
   const handelMostRead = async () => {
     try {
       const req = await fetch("https://serverawalbawl.vercel.app/news/views");
@@ -19,9 +20,6 @@ const MostRead = () => {
       if (error) throw error;
     }
   };
-  useEffect(() => {
-    handelMostRead();
-  }, []);
   function SampleNextArrow({ onClick }) {
     return (
       <div className="arrow_icons arrow_icons_next" onClick={onClick}>
@@ -36,10 +34,35 @@ const MostRead = () => {
       </div>
     );
   }
+  const updateSlidesToShow = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 1000) {
+      setSlidesToShow(3);
+    } else if (windowWidth <= 1000 && windowWidth >= 700) {
+      setSlidesToShow(2);
+    } else if (windowWidth < 700) {
+      setSlidesToShow(1);
+    }
+  };
+
+  useEffect(() => {
+    handelMostRead()
+    // Update slidesToShow when the component mounts
+    updateSlidesToShow();
+
+    // Update slidesToShow when the window is resized
+    window.addEventListener('resize', updateSlidesToShow);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow);
+    };
+  }, []); // Pass an empty array to ensure this effect runs only once
+
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     nextArrow: <SampleNextArrow />,
