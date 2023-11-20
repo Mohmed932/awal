@@ -1,7 +1,10 @@
+"use client"
 import Link from "next/link";
 import "../app/styles/NewsTicker.css";
-import { memo } from "react";
+import { memo, useContext } from "react";
+import { DataContext } from "@/app/context";
 const NewsTicker = memo(({ last }) => {
+  const { isDarkMode} = useContext(DataContext);
   return (
     <div className="ticker">
       <ul className="newsList">

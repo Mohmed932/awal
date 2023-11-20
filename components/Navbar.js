@@ -33,7 +33,7 @@ const Navbar = () => {
   const Path = [
     { name: "رياضه", url: "/sports" },
     { name: "تكنولوجيا", url: "/technology" },
-    { name: "اقتصاد", url: "/economy_Stock_Exchange" },
+    { name: "اقتصاد", url: "/economy" },
     { name: "سياسه", url: "/politics" },
     { name: "اخبار العالم", url: "/world" },
     { name: "فن", url: "/art" },
@@ -41,9 +41,9 @@ const Navbar = () => {
     { name: "تعليم", url: "/school" },
     { name: "ثقافه", url: "/culture" },
     { name: "صحه", url: "/health" },
-    { name: "احداث", url: "/events" },
+    { name: "احداث", url: "/events" },  
     { name: "التحقيقات", url: "/investigations" },
-    { name: "خدمات السفارات", url: "/embassies_services" },
+    { name: "خدمات السفارات", url: "/embassies" },
   ];
   const HandelSearch = async () => {
     try {

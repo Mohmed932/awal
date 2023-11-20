@@ -1,9 +1,11 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useContext } from "react";
 import "@/app/styles/Sections.css";
 import Link from "next/link";
 import LoadingOne from "./Loading/LoadingOne";
+import { DataContext } from "@/app/context";
 
 const MainSections = ({ NewsSection, loading, name, link }) => {
+  const { isDarkMode} = useContext(DataContext);
   const handleClick = useCallback(() => {
     window.scrollTo({ top: 0 });
   }, []);

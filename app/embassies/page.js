@@ -1,15 +1,15 @@
 import Miscellaneous from "@/components/Miscellaneous";
 
-const technology = async () => {
+const embassies = async () => {
   const req = await fetch(
-    "https://serverawalbawl.vercel.app/news/technology?page=1&limit=10"
+    "https://serverawalbawl.vercel.app/news/embassies?page=1&limit=10"
   );
   const res = await req.json();
   const reqViews = await fetch(
-    "https://serverawalbawl.vercel.app/news/technology/views"
+    "https://serverawalbawl.vercel.app/news/embassies/views"
   );
   const resViews = await reqViews.json();
-  const kind = "تكنولوجيا"
+  const kind = "سفارات"
   return (
     <Miscellaneous
       News={res.newsData}
@@ -19,4 +19,4 @@ const technology = async () => {
   );
 };
 
-export default technology;
+export default embassies;

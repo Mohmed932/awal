@@ -5,7 +5,7 @@ import { DataContext } from "@/app/context";
 import Loadingeight from "./Loading/Loadingeight";
 
 const Search = memo(({ show, setshow, setsearchItem }) => {
-  const { stateSearch } = useContext(DataContext);
+  const { stateSearch,isDarkMode } = useContext(DataContext);
   const navigate = useRouter();
   const handelSearch = useCallback(
     (_id) => {

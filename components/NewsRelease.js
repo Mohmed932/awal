@@ -6,7 +6,7 @@ import { DataContext } from "@/app/context";
 const NewsRelease = memo(() => {
   const [email, setEmail] = useState("");
   const [check, setcheck] = useState(false);
-  const { stateNewsRelease, dispatchNewsRelease } = useContext(DataContext);
+  const { stateNewsRelease, dispatchNewsRelease,isDarkMode } = useContext(DataContext);
   const validateEmail = (email) => {
     const regex =
       /^(?=.{1,254})(?=[^@]*[a-zA-Z0-9._+-])[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;

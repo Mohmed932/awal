@@ -1,24 +1,24 @@
 // import Sections from "@/components/Sections/Sections";
 // import SectionsViews from "@/components/Sections/SectionsViews";
-// import { Fragment, Suspense } from "react";
+import Miscellaneous from "@/components/Miscellaneous";
 
-// const careers = async () => {
-// const reqcareer = await fetch("https://serverawalbawl.vercel.app/news/career?page=1&limit=10");
-// const rescareer = await reqcareer.json();
-//     const careerData = rescareer.newsData
-//     const reqcareerViews = await fetch("https://serverawalbawl.vercel.app/news/career/views");
-//     const rescareerViews = await reqcareerViews.json();
-//     return <Fragment>
-//         <Suspense fallback={<h1>ArtData</h1>}><Sections Data={careerData} /></Suspense>
-//         <Suspense fallback={<h1>ArtViews.....</h1>}><SectionsViews ViewsData={rescareerViews} /></Suspense>
-//     </Fragment>
-// }
-
-// export default careers
-import React from "react";
-
-const page = () => {
-  return <div>page</div>;
+const careers = async () => {
+  const req = await fetch(
+    "https://serverawalbawl.vercel.app/news/careers?page=1&limit=10"
+  );
+  const res = await req.json();
+  const reqViews = await fetch(
+    "https://serverawalbawl.vercel.app/news/careers/views"
+  );
+  const resViews = await reqViews.json();
+  const kind ="وظائف"
+  return (
+    <Miscellaneous
+      News={res.newsData}
+      kind={kind}
+      NewsMiscellaneous={resViews}
+    />
+  );
 };
 
-export default page;
+export default careers;

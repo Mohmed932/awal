@@ -1,24 +1,22 @@
-// import Sections from "@/components/Sections/Sections";
-// import SectionsViews from "@/components/Sections/SectionsViews";
-// import { Fragment, Suspense } from "react";
+import Miscellaneous from "@/components/Miscellaneous";
 
-// const art = async () => {
-// const reqArt = await fetch("https://serverawalbawl.vercel.app/news/art?page=1&limit=10");
-// const resArt = await reqArt.json();
-//     const ArtData = resArt.newsData
-//     const reqArtViews = await fetch("https://serverawalbawl.vercel.app/news/art/views");
-//     const resArtViews = await reqArtViews.json();
-//     return <Fragment>
-//         <Suspense fallback={<h1>ArtData</h1>}><Sections Data={ArtData} /></Suspense>
-//         <Suspense fallback={<h1>ArtViews.....</h1>}><SectionsViews ViewsData={resArtViews} /></Suspense>
-//     </Fragment>
-// }
-
-// export default art
-import React from "react";
-
-const page = () => {
-  return <div>page</div>;
+const art = async () => {
+  const req = await fetch(
+    "https://serverawalbawl.vercel.app/news/art?page=1&limit=10"
+  );
+  const res = await req.json();
+  const reqViews = await fetch(
+    "https://serverawalbawl.vercel.app/news/art/views"
+  );
+  const resViews = await reqViews.json();
+  const kind = "فن"
+  return (
+    <Miscellaneous
+      News={res.newsData}
+      kind={kind}
+      NewsMiscellaneous={resViews}
+    />
+  );
 };
 
-export default page;
+export default art;

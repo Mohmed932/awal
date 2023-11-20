@@ -1,13 +1,15 @@
 "use client";
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState, memo, useContext } from "react";
 import "@/app/styles/Footer.css";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { SiGooglenews } from "react-icons/si";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { DataContext } from "@/app/context";
 
 const Footer = memo(() => {
+  const { isDarkMode} = useContext(DataContext);
   const [show, setShow] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +25,7 @@ const Footer = memo(() => {
   }, [show]);
   const navigate = useRouter();
   return (
-    <div className="Footer">
+    <div  className={isDarkMode ? "Footer dark-mode" : "Footer"}>
       <div className="Footer_links">
         <div className="Footer_revers">
           <a

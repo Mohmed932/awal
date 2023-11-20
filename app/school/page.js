@@ -1,26 +1,22 @@
-// import Sections from "@/components/Sections/Sections";
-// import SectionsViews from "@/components/Sections/SectionsViews";
-// import { Fragment, Suspense } from "react";
+import Miscellaneous from "@/components/Miscellaneous";
 
-// const school = async () => {
-//     const reqschool = await fetch("https://serverawalbawl.vercel.app/news/school?page=1&limit=10");
-//     const resschool = await reqschool.json();
-//     const schoolData = resschool.newsData
-//     const reqschoolViews = await fetch("https://serverawalbawl.vercel.app/news/school/views");
-//     const resschoolViews = await reqschoolViews.json();
-//     return <Fragment>
-//         <Suspense fallback={<h1>schoolData</h1>}><Sections Data={schoolData} /></Suspense>
-//         <Suspense fallback={<h1>schoolViews.....</h1>}><SectionsViews ViewsData={resschoolViews} /></Suspense>
-//     </Fragment>
-// }
-
-// export default school
-import React from 'react'
-
-const page = () => {
+const school = async () => {
+  const req = await fetch(
+    "https://serverawalbawl.vercel.app/news/school?page=1&limit=10"
+  );
+  const res = await req.json();
+  const reqViews = await fetch(
+    "https://serverawalbawl.vercel.app/news/school/views"
+  );
+  const resViews = await reqViews.json();
+  const kind = "تعليم"
   return (
-    <div>page</div>
-  )
-}
+    <Miscellaneous
+      News={res.newsData}
+      kind={kind}
+      NewsMiscellaneous={resViews}
+    />
+  );
+};
 
-export default page
+export default school;

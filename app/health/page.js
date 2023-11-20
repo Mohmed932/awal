@@ -1,26 +1,22 @@
-// import Sections from "@/components/Sections/Sections";
-// import SectionsViews from "@/components/Sections/SectionsViews";
-// import { Fragment, Suspense } from "react";
+import Miscellaneous from "@/components/Miscellaneous";
 
-// const health = async () => {
-//     const reqhealth = await fetch("https://serverawalbawl.vercel.app/news/health?page=1&limit=10");
-//     const reshealth = await reqhealth.json();
-//     const healthData = reshealth.newsData
-//     const reqhealthViews = await fetch("https://serverawalbawl.vercel.app/news/health/views");
-//     const reshealthViews = await reqhealthViews.json();
-//     return <Fragment>
-//         <Suspense fallback={<h1>healthData</h1>}><Sections Data={healthData} /></Suspense>
-//         <Suspense fallback={<h1>healthViews.....</h1>}><SectionsViews ViewsData={reshealthViews} /></Suspense>
-//     </Fragment>
-// }
-
-// export default health
-import React from 'react'
-
-const page = () => {
+const health = async () => {
+  const req = await fetch(
+    "https://serverawalbawl.vercel.app/news/health?page=1&limit=10"
+  );
+  const res = await req.json();
+  const reqViews = await fetch(
+    "https://serverawalbawl.vercel.app/news/health/views"
+  );
+  const resViews = await reqViews.json();
+  const kind ="صحه"
   return (
-    <div>page</div>
-  )
-}
+    <Miscellaneous
+      News={res.newsData}
+      kind={kind}
+      NewsMiscellaneous={resViews}
+    />
+  );
+};
 
-export default page
+export default health;

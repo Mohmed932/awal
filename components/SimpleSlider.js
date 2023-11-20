@@ -2,10 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
-// import
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { DataContext } from "@/app/context";
+import { useContext } from "react";
 
 const SimpleSlider = ({ last }) => {
+  const { isDarkMode} = useContext(DataContext);
   function SampleNextArrow({ onClick }) {
     return (
       <div className="arrow_icons arrow_icons_next" onClick={onClick}>

@@ -1,15 +1,17 @@
 "use client";
 import "@/app/styles/MostRead.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
+import { DataContext } from "@/app/context";
 
 const MostRead = () => {
   const [data, setData] = useState(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
+  const {isDarkMode} = useContext(DataContext)
   const handelMostRead = async () => {
     try {
       const req = await fetch("https://serverawalbawl.vercel.app/news/views");
@@ -46,16 +48,16 @@ const MostRead = () => {
   };
 
   useEffect(() => {
-    handelMostRead()
+    handelMostRead();
     // Update slidesToShow when the component mounts
     updateSlidesToShow();
 
     // Update slidesToShow when the window is resized
-    window.addEventListener('resize', updateSlidesToShow);
+    window.addEventListener("resize", updateSlidesToShow);
 
     // Clean up the event listener when the component is unmounted
     return () => {
-      window.removeEventListener('resize', updateSlidesToShow);
+      window.removeEventListener("resize", updateSlidesToShow);
     };
   }, []); // Pass an empty array to ensure this effect runs only once
 
@@ -69,7 +71,7 @@ const MostRead = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="MostRead">
+    <div className={isDarkMode ? "MostRead dark-mode" : "MostRead"}>
       <div className="MostRead_container">
         <h3>الأكثر قرأه</h3>
         <div className="MostRead_Slider">

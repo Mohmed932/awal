@@ -1,26 +1,22 @@
-// import Sections from "@/components/Sections/Sections";
-// import SectionsViews from "@/components/Sections/SectionsViews";
-// import { Fragment, Suspense } from "react";
+import Miscellaneous from "@/components/Miscellaneous";
 
-// const politics = async () => {
-//     const reqpolitics = await fetch("https://serverawalbawl.vercel.app/news/politics?page=1&limit=10");
-//     const respolitics = await reqpolitics.json();
-//     const politicsData = respolitics.newsData
-//     const reqpoliticsViews = await fetch("https://serverawalbawl.vercel.app/news/politics/views");
-//     const respoliticsViews = await reqpoliticsViews.json();
-//     return <Fragment>
-//         <Suspense fallback={<h1>politicsData</h1>}><Sections Data={politicsData} /></Suspense>
-//         <Suspense fallback={<h1>politicsViews.....</h1>}><SectionsViews ViewsData={respoliticsViews} /></Suspense>
-//     </Fragment>
-// }
-
-// export default politics
-import React from 'react'
-
-const page = () => {
+const politics = async () => {
+  const req = await fetch(
+    "https://serverawalbawl.vercel.app/news/politics?page=1&limit=10"
+  );
+  const res = await req.json();
+  const reqViews = await fetch(
+    "https://serverawalbawl.vercel.app/news/politics/views"
+  );
+  const resViews = await reqViews.json();
+  const kind = "سياسه"
   return (
-    <div>page</div>
-  )
-}
+    <Miscellaneous
+      News={res.newsData}
+      kind={kind}
+      NewsMiscellaneous={resViews}
+    />
+  );
+};
 
-export default page
+export default politics;
