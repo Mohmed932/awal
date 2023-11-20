@@ -1,0 +1,97 @@
+.LoadingOne {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skeleton-item {
+    min-height: 60vh;
+    width: 23vw;
+    margin: 10px;
+    overflow: hidden;
+    background-color: var(--skeleton--background);
+  }
+  .LoadingOne .skeleton-img {
+    height: 40vh;
+    width: 100%;
+    background-color: var(--skeleton--text);
+    position: relative;
+  }
+  .LoadingOne .skeleton-img:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    height: 100%;
+    background-color: var(--skeleton--animation);
+    animation: wave 1s ease-out infinite;
+  }
+  .LoadingOne .skeleton-item span {
+    display: inline-block;
+    width: 40%;
+    margin: 15px;
+    margin-left: 15vw;
+    height: 20px;
+    background-color: var(--skeleton--text);
+    position: relative;
+  }
+  .LoadingOne .skeleton-item p {
+    width: 85%;
+    margin: 10px 5px;
+    margin-left: 5vw;
+    height: 20px;
+    background-color: var(--skeleton--text);
+    position: relative;
+  }
+  .LoadingOne .skeleton-item span:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    height: 100%;
+    background-color: var(--skeleton--animation);
+    animation: wave 1s ease-out infinite;
+  }
+  .LoadingOne .skeleton-item p:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    height: 100%;
+    background-color: var(--skeleton--animation);
+    animation: wave 1s ease-out infinite;
+  }
+  @media (max-width: 1350px) {
+    .skeleton-item {
+      width: 30vw;
+    }
+    .LoadingOne .skeleton-item span {
+      margin-left: 22vw;
+    }
+  }
+  @media (max-width: 1000px) {
+    .skeleton-item {
+      width: 42vw;
+    }
+    .LoadingOne .skeleton-item span {
+      margin-left: 27vw;
+    }
+    .LoadingOne .skeleton-item p {
+      margin-left: 10vw;
+    }
+  }
+  @media (max-width: 767px) {
+    .skeleton-item {
+      width: 90vw;
+      height: fit-content;
+      margin: 10px;
+    }
+    .LoadingOne .skeleton-item span {
+      margin-left: 60vw;
+    }
+    .LoadingOne .skeleton-item p {
+      margin-left: 15vw;
+    }
+  }

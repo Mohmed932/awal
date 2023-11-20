@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import "@/app/styles/Sections.css";
 import Link from "next/link";
+import LoadingOne from "./Loading/LoadingOne";
 
 const MainSections = ({ NewsSection, loading, name, link }) => {
   const handleClick = useCallback(() => {
@@ -39,7 +40,7 @@ const MainSections = ({ NewsSection, loading, name, link }) => {
         <h3>{name}</h3>
       </div>
       <div className="Sections_items">
-        {NewsSection?.newsData.slice(3, 6).map(renderItem)}
+        {loading==="loading"?<LoadingOne/>:NewsSection?.newsData.slice(3, 6).map(renderItem)}
       </div>
       <div className="Sections_items_link">
         <Link href={link}>وريني اكتر</Link>

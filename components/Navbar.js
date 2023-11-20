@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, memo, useContext } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import "@/app/styles/Navbar.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
