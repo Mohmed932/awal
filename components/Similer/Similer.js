@@ -6,7 +6,7 @@ import Link from "next/link";
 import SimilerLoading from "../Loading/SimilerLoading";
 
 const Similer = ({ id }) => {
-  const { dispatch, state,isDarkMode } = useContext(DataContext);
+  const { dispatch, state, isDarkMode } = useContext(DataContext);
   const SimilerDataFetching = async () => {
     try {
       dispatch({ type: "LOADING", payload: null });
@@ -28,7 +28,7 @@ const Similer = ({ id }) => {
         <SimilerLoading />
       ) : (
         <div className="Main_Similer_news">
-          <h3>اخبار متعلقة</h3>
+          <h2>اخبار متعلقة</h2>
           <div className="main_container_Similer">
             {state.data.map(({ _id, title, more_details: { largeImage } }) => (
               <div className="Similer_news_container" key={_id}>

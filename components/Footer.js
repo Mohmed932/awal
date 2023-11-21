@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { DataContext } from "@/app/context";
 
 const Footer = memo(() => {
-  const { isDarkMode} = useContext(DataContext);
+  const { isDarkMode } = useContext(DataContext);
   const [show, setShow] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -25,12 +25,13 @@ const Footer = memo(() => {
   }, [show]);
   const navigate = useRouter();
   return (
-    <div  className={isDarkMode ? "Footer dark-mode" : "Footer"}>
+    <div className={isDarkMode ? "Footer dark-mode" : "Footer"}>
       <div className="Footer_links">
         <div className="Footer_revers">
           <a
             href="https://m0hmed.vercel.app/"
             alt="محمد محمود فؤاد"
+            rel="noreferrer"
             target="blank"
             aria-label="محمد محمود فؤاد"
           >

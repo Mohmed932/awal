@@ -29,26 +29,6 @@ const SingleNews = async ({ params }) => {
     `https://serverawalbawl.vercel.app/news/${params.id}`
   );
   const res = await req.json();
-  // const handelCopy = () => {
-  //   // Check if the Clipboard API is available in the browser
-  //   if (navigator.clipboard) {
-  //     // Text you want to copy
-  //     toast.error("متصفحك لا يدعم هذه الميزه");
-
-  //     // Use the writeText() method to copy the text to the clipboard
-  //     navigator.clipboard
-  //       .writeText(textToCopy)
-  //       .then(() => {
-  //         toast.success("تم نسخ الخبر بنجاح");
-  //       })
-  //       .catch((err) => {
-  //         toast.error("عفو حدث خطأ ما");
-  //         console.error(err);
-  //       });
-  //   } else {
-  //     console.error("Clipboard API is not available in this browser.");
-  //   }
-  // };
   return (
     <div className="Single_news">
       <div className="Single_news_Similer">

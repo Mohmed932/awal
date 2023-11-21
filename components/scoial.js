@@ -12,7 +12,7 @@ import { DataContext } from "@/app/context";
 import { useContext } from "react";
 
 const Scoial = ({ res, params }) => {
-  const { isDarkMode} = useContext(DataContext);
+  const { isDarkMode } = useContext(DataContext);
   const url = ` https://www.awalbawl.online/news/${params.id}`;
   const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   const twitter = `https://twitter.com/intent/tweet?url=${url}&text=${res?.title}`;
@@ -44,19 +44,24 @@ const Scoial = ({ res, params }) => {
         className="SingleNews_icon SingleNews_FaShare"
         onClick={handleShare}
       />
-      <a href={facebook} target="_blank" rel="noreferrer">
+      <a href={facebook} target="_blank" rel="noreferrer" aria-label="facebook">
         <FaFacebookF className="SingleNews_icon SingleNews_FaFacebookF" />
       </a>
-      <a href={twitter} target="_blank" rel="noreferrer">
+      <a href={twitter} target="_blank" rel="noreferrer" aria-label="twitter">
         <FaTwitter className="SingleNews_icon SingleNews_FaTwitter" />
       </a>
-      <a href={linkedin} target="_blank" rel="noreferrer">
+      <a href={linkedin} target="_blank" rel="noreferrer" aria-label="linkedin">
         <FaLinkedinIn className="SingleNews_icon SingleNews_FaLinkedinIn" />
       </a>
-      <a href={pinterest} target="_blank" rel="noreferrer">
+      <a
+        href={pinterest}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="pinterest"
+      >
         <FaPinterestP className="SingleNews_icon SingleNews_FaPinterestP" />
       </a>
-      <a href={whatsapp} target="_blank" rel="noreferrer">
+      <a href={whatsapp} target="_blank" rel="noreferrer" aria-label="whatsapp">
         <FaWhatsapp className="SingleNews_icon SingleNews_FaWhatsapp" />
       </a>
     </div>
