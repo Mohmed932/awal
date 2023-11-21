@@ -47,7 +47,7 @@ const Miscellaneous = ({ News, kind, NewsMiscellaneous ,partOfUrl}) => {
                     <img src={largeImage} alt={title} loading="lazy" />
                   </div>
                   <Link
-                    href={`/single/${_id}`}
+                    href={`/news/${_id}`}
                     onClick={() => window.scrollTo({ top: "0" })}
                   >
                     <h1>{title}</h1>
