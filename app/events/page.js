@@ -10,10 +10,12 @@ const events = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "احداث"
+  const partOfUrl = "events"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
+      partOfUrl={partOfUrl}
       NewsMiscellaneous={resViews}
     />
   );

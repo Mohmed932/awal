@@ -10,11 +10,13 @@ const culture = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "ثقافه"
+  const partOfUrl = "culture"
   return (
     <Miscellaneous
       News={res.newsData}
-      kind={kind}
       NewsMiscellaneous={resViews}
+      kind={kind}
+      partOfUrl={partOfUrl}
     />
   );
 };

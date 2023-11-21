@@ -10,10 +10,12 @@ const school = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "تعليم"
+  const partOfUrl = "school"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
+      partOfUrl={partOfUrl}
       NewsMiscellaneous={resViews}
     />
   );

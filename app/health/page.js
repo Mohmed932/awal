@@ -10,10 +10,12 @@ const health = async () => {
   );
   const resViews = await reqViews.json();
   const kind ="صحه"
+  const partOfUrl = "health"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
+      partOfUrl={partOfUrl}
       NewsMiscellaneous={resViews}
     />
   );

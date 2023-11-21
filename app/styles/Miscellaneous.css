@@ -92,6 +92,15 @@
     margin-top: 5vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.AllMiscellaneous_pagnation button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .AllMiscellaneous_arrow,

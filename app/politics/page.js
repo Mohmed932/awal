@@ -10,10 +10,12 @@ const politics = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "سياسه"
+  const partOfUrl = "politics"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
+      partOfUrl={partOfUrl}
       NewsMiscellaneous={resViews}
     />
   );

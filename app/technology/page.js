@@ -10,11 +10,13 @@ const technology = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "تكنولوجيا"
+  const partOfUrl = "technology"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
       NewsMiscellaneous={resViews}
+      partOfUrl={partOfUrl}
     />
   );
 };

@@ -10,10 +10,12 @@ const embassies = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "سفارات"
+  const partOfUrl = "embassies"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
+      partOfUrl={partOfUrl}
       NewsMiscellaneous={resViews}
     />
   );

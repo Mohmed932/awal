@@ -10,11 +10,13 @@ const economy = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "اقتصاد"
+  const partOfUrl = "economy"
   return (
     <Miscellaneous
       News={res.newsData}
-      kind={kind}
       NewsMiscellaneous={resViews}
+      kind={kind}
+      partOfUrl={partOfUrl}
     />
   );
 };

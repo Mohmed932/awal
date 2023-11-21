@@ -10,11 +10,13 @@ const sports = async () => {
   );
   const resViews = await reqViews.json();
   const kind = "رياضه"
+  const partOfUrl = "sports"
   return (
     <Miscellaneous
       News={res.newsData}
       kind={kind}
       NewsMiscellaneous={resViews}
+      partOfUrl={partOfUrl}
     />
   );
 };
