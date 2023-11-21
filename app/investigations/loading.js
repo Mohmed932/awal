@@ -1,7 +1,7 @@
-import React from "react";
+import LineBar from "@/components/Loading/lineBar";
 
 const loading = () => {
-  return <div>loading</div>;
+  return <LineBar />;
 };
 
 export default loading;

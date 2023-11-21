@@ -34,6 +34,7 @@ export default function ThemeProvider({ children }) {
   const [stateHealth, dispatchHealth] = useReducer(dataReducer, InitialValue);
   const [stateSchool, dispatchSchool] = useReducer(dataReducer, InitialValue);
   const [stateSports, dispatchSports] = useReducer(dataReducer, InitialValue);
+  const [stateViews, dispatchViews] = useReducer(dataReducer, InitialValue);
   const [stateTechnology, dispatchTechnology] = useReducer(
     dataReducer,
     InitialValue
@@ -90,6 +91,8 @@ export default function ThemeProvider({ children }) {
     dispatchWorld,
     stateNewsRelease,
     dispatchNewsRelease,
+    dispatchViews,
+    stateViews,
   };
   return (
     <DataContext.Provider value={contextValue}>{children}</DataContext.Provider>

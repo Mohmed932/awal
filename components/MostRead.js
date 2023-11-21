@@ -5,20 +5,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import Link from "next/link";
 import { DataContext } from "@/app/context";
+import { useRouter } from "next/navigation";
+import Cricle from "./Loading/cricle";
 
 const MostRead = () => {
-  const [data, setData] = useState(null);
+  const route = useRouter();
   const [slidesToShow, setSlidesToShow] = useState(3);
-  const {isDarkMode} = useContext(DataContext)
+  const { isDarkMode, dispatchViews, stateViews } = useContext(DataContext);
   const handelMostRead = async () => {
     try {
+      dispatchViews({ type: "LOADING", payload: null });
       const req = await fetch("https://serverawalbawl.vercel.app/news/views");
       const res = await req.json();
-      setData(res);
+      dispatchViews({ type: "LOADED", payload: res });
     } catch (error) {
-      setData(null);
+      dispatchViews({ type: "ERROR", payload: error.message });
       if (error) throw error;
     }
   };
@@ -46,7 +48,9 @@ const MostRead = () => {
       setSlidesToShow(1);
     }
   };
-
+  const GoToSingleNews = (_id) => {
+    route.push(`/news/${_id}`);
+  };
   useEffect(() => {
     handelMostRead();
     // Update slidesToShow when the component mounts
@@ -72,25 +76,33 @@ const MostRead = () => {
   };
   return (
     <div className={isDarkMode ? "MostRead dark-mode" : "MostRead"}>
-      <div className="MostRead_container">
-        <h3>الأكثر قرأه</h3>
-        <div className="MostRead_Slider">
-          <Slider {...settings}>
-            {data?.map(({ _id, title, more_details }) => (
-              <div className="MostRead_Slider_items" key={_id}>
-                <div className="MostRead_item_image">
-                  <img
-                    src={more_details.largeImage}
-                    alt={title}
-                    loading="lazy"
-                  />
+      {stateViews.status === "loading" ? (
+        <Cricle />
+      ) : (
+        <div className="MostRead_container">
+          <h3>الأكثر قرأه</h3>
+          <div className="MostRead_Slider">
+            <Slider {...settings}>
+              {stateViews.data?.map(({ _id, title, more_details }) => (
+                <div
+                  className="MostRead_Slider_items"
+                  key={_id}
+                  onClick={() => GoToSingleNews(_id)}
+                >
+                  <div className="MostRead_item_image">
+                    <img
+                      src={more_details.largeImage}
+                      alt={title}
+                      loading="lazy"
+                    />
+                  </div>
+                  <h1>{title}</h1>
                 </div>
-                <h1>{title}</h1>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
