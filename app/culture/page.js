@@ -2,7 +2,11 @@ import Miscellaneous from "@/components/Miscellaneous";
 
 const culture = async () => {
   const req = await fetch(
-    "https://serverawalbawl.vercel.app/news/culture?page=1&limit=10"
+    "https://serverawalbawl.vercel.app/news/culture?page=1&limit=10", {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
   const res = await req.json();
   const reqViews = await fetch(
