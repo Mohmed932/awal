@@ -1,6 +1,6 @@
 import Miscellaneous from "@/components/Miscellaneous";
 
-const Word = async () => {
+const world = async () => {
   const req = await fetch(
     `https://serverawalbawl.vercel.app/news/world?page=1&limit=10`, {
       next: {
@@ -25,4 +25,4 @@ const Word = async () => {
   );
 };
 
-export default Word;
+export default world;
