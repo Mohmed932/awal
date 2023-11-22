@@ -61,12 +61,8 @@ const Navbar = () => {
   const item = (
     <div className="Navbar_main">
       <div className="logo" onClick={() => navigate.push("/")}>
-        <h1>
-          <span>ا</span>ول
-        </h1>
-        <h1>
-          <span>ا</span>ب
-        </h1>
+        <span>A</span>
+        <span>A</span>
       </div>
       <div className="Navbar_item">
         <div className="Sidebar">
