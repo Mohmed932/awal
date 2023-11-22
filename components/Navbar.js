@@ -41,7 +41,7 @@ const Navbar = () => {
     { name: "تعليم", url: "/school" },
     { name: "ثقافه", url: "/culture" },
     { name: "صحه", url: "/health" },
-    { name: "احداث", url: "/events" },  
+    { name: "احداث", url: "/events" },
     { name: "التحقيقات", url: "/investigations" },
     { name: "خدمات السفارات", url: "/embassies" },
   ];
@@ -61,7 +61,12 @@ const Navbar = () => {
   const item = (
     <div className="Navbar_main">
       <div className="logo" onClick={() => navigate.push("/")}>
-        <h1>اول بأول</h1>
+        <h1>
+          <span>ا</span>ول
+        </h1>
+        <h1>
+          <span>ا</span>ب
+        </h1>
       </div>
       <div className="Navbar_item">
         <div className="Sidebar">
