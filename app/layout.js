@@ -1,39 +1,26 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import ThemeProvider from "./context";
 import "./globals.css";
 import { Alexandria } from "next/font/google";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
 const inter = Alexandria({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "أول بأول- ناقل اخباري",
-  description:
-    "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
-  icons: {
-    icon: "https://www.awalbawl.online/ios/512.png",
-    shortcut: "https://www.awalbawl.online/ios/16.png",
-    apple: "https://www.awalbawl.online/ios/16.png",
-  },
-  metadataBase: new URL("https://www.awalbawl.online"),
-  title: "أول بأول- ناقل اخباري",
-  description:
-    "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
-  canonical: `https://www.awalbawl.online/`,
-  openGraph: {
-    title: "أول بأول- ناقل اخباري",
-    description:
-      "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
-    siteName: "اول بأول",
-    type: "website",
-  },
-};
-
 export default function RootLayout({ children }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    localStorage.setItem("isDarkMode", isDarkMode);
+  }, [isDarkMode]);
   return (
     <html lang="ar">
-      <body className={inter.className}>
+      <body
+        className={
+          isDarkMode ? `${inter.className} dark-mode` : inter.className
+        }
+      >
         <ThemeProvider>
-          <Navbar />
+          <Navbar setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode} />
           {children}
           <Footer />
         </ThemeProvider>

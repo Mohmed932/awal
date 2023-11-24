@@ -9,8 +9,8 @@ import { useRouter } from "next/navigation";
 import Search from "./Search";
 import { DataContext } from "@/app/context";
 
-const Navbar = () => {
-  const { dispatchSearch, isDarkMode, setIsDarkMode } = useContext(DataContext);
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+  const { dispatchSearch } = useContext(DataContext);
   const [searchResult, setSearchResult] = useState("");
   const [show, setshow] = useState(false);
   const [more, setmore] = useState(false);
@@ -27,9 +27,6 @@ const Navbar = () => {
     setSearchResult("");
     setshow(false);
   };
-  useEffect(() => {
-    localStorage.setItem("isDarkMode", isDarkMode);
-  }, [isDarkMode]);
   const Path = [
     { name: "رياضه", url: "/sports" },
     { name: "تكنولوجيا", url: "/technology" },

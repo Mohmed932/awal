@@ -9,7 +9,8 @@
 .Similer_news {
   direction: rtl;
   padding: 20px;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--background-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   overflow: hidden;
 }
@@ -20,9 +21,6 @@
   display: block;
   line-height: 1.3;
   margin: 10px 0;
-}
-.Similer_news_container a {
-  color: #000;
 }
 .Similer_img_loader {
   width: 100%;
@@ -39,6 +37,9 @@
   display: flex;
   flex-direction: column;
   direction: rtl;
+}
+.Similer_news h2 {
+  padding: 10px 0;
 }
 .Single_news_kind {
   width: fit-content;

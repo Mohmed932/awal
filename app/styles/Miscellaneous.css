@@ -1,196 +1,199 @@
 .AllMiscellaneous {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5vh 0;
-    /* background-color: var(--background-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh 0;
+  /* background-color: var(--background-color); */
 }
 
 .AllMiscellaneous img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .AllMiscellaneous_container {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .AllMiscellaneous_left {
-    width: 60%;
+  width: 60%;
 }
 
 .AllMiscellaneous_left_line {
-    width: fit-content;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--text-color);
+  width: fit-content;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--text-color);
 }
 
 .AllMiscellaneous_left_line h1 {
-    padding: 10px;
-    font-size: 10px;
-    /* color: var(--text-color); */
+  padding: 10px;
+  font-size: 10px;
+  /* color: var(--text-color); */
 }
 
 .AllMiscellaneous_items {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-radius: 10px;
 }
 
 .AllMiscellaneous_item {
-    width: 45%;
-    height: auto;
-    margin: 10px;
-    line-height: 1.6;
-    direction: rtl;
-    background-color: #ffffff09;
+  width: 45%;
+  height: auto;
+  margin: 10px;
+  line-height: 1.6;
+  direction: rtl;
+  padding: 20px 10px;
+  background-color: #ffffff09;
 }
 
 .AllMiscellaneous_item_img {
-    width: 100%;
-    height: 60%;
-    background-color: var(--loading-img);
-    z-index: 4;
+  width: 100%;
+  height: 60%;
+  background-color: var(--loading-img);
+  z-index: 4;
 }
 
 .AllMiscellaneous_item_img img {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .AllMiscellaneous_item h1 {
-    font-size: 10px;
-    color: var(--text-color);
-    font-weight: 100;
-    padding: 0 10px;
-    cursor: pointer;
+  font-size: 10px;
+  color: var(--text-color);
+  font-weight: 100;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 .AllMiscellaneous_item span {
-    display: block;
-    font-size: 10px;
-    color: var(--text-color);
-    padding: 0 10px;
-    font-weight: 100;
+  display: block;
+  font-size: 10px;
+  color: var(--text-color);
+  padding: 0 10px;
+  font-weight: 100;
 }
 
 .AllMiscellaneous_item p {
-    font-size: 15px;
-    color: var(--text-color);
-    padding: 0 10px;
-    font-weight: 100;
+  font-size: 15px;
+  color: var(--text-color);
+  padding: 0 10px;
+  font-weight: 100;
 }
 
 .AllMiscellaneous_pagnation {
-    margin-top: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.AllMiscellaneous_pagnation button{
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.AllMiscellaneous_pagnation button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--text-color);
 }
 
 .AllMiscellaneous_arrow,
 .AllMiscellaneous_pagnation span {
-    padding: 5px;
-    font-size: 17px;
-    color: var(--text-color);
-    cursor: pointer;
-    background-color: #229f0b;
+  padding: 5px;
+  font-size: 17px;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: #229f0b;
 }
 
 .AllMiscellaneous_pagnation span {
-    border: 1px solid #ffffff09;
-    margin: 0 5px;
-    background-color: transparent;
-    transition: .5s;
+  border: 1px solid #ffffff09;
+  margin: 0 5px;
+  background-color: transparent;
+  transition: 0.5s;
 }
 .AllMiscellaneous_pagnation span:hover {
-    background-color: #229f0b;
+  background-color: #229f0b;
 }
 
 .AllMiscellaneous_rifht {
-    width: 30%;
+  width: 30%;
 }
-.AllMiscellaneous_views_word{
-    position: relative;
-    border-bottom: 5px solid var(--line-color);
-    direction: rtl;
-    margin: 2vh 0;
+.AllMiscellaneous_views_word {
+  position: relative;
+  border-bottom: 5px solid var(--line-color);
+  direction: rtl;
+  margin: 2vh 0;
 }
 .AllMiscellaneous_views_word::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    width: 30%;
-    height: 3px;
-    /* margin: 5px 0; */
-    background-color: var(--text-color);;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 30%;
+  height: 3px;
+  /* margin: 5px 0; */
+  background-color: var(--text-color);
 }
 .AllMiscellaneous_views_word h1 {
-    font-size: 15px;
-    color: var(--text-color);
+  font-size: 15px;
+  color: var(--text-color);
 }
 
-.AllMiscellaneous_Subscribe{
-    margin-top: 10vh;
+.AllMiscellaneous_Subscribe {
+  margin-top: 10vh;
 }
 @media (max-width: 1600px) {
-    .AllMiscellaneous_container {
-        width: 90%;
-    }
+  .AllMiscellaneous_container {
+    width: 90%;
+  }
 }
 
 @media (max-width: 1000px) {
-    .AllMiscellaneous_container {
-     flex-direction: column;
-    }
-    .AllMiscellaneous_left{
-        width: 100%;
-    }
-    .AllMiscellaneous_rifht{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .AllMiscellaneous_views{
-        width: 75%;
-        padding: 20px;
-    }
-    .AllMiscellaneous_Subscribe{
-        width: 50%;
-        margin-top: 0;
-        background-color: wheat;
-    }
+  .AllMiscellaneous_container {
+    flex-direction: column;
+  }
+  .AllMiscellaneous_left {
+    width: 100%;
+  }
+  .AllMiscellaneous_rifht {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .AllMiscellaneous_views {
+    width: 75%;
+    padding: 20px;
+  }
+  .AllMiscellaneous_Subscribe {
+    width: 50%;
+    margin-top: 0;
+    background-color: wheat;
+  }
 }
 
 @media (max-width: 600px) {
-    .AllMiscellaneous_item{
-        width: 90%;
-    }
-    .AllMiscellaneous_rifht{
-        flex-direction: column;
-    }
-    .AllMiscellaneous_views{
-        width: 100%;
-    }
-    .AllMiscellaneous_Subscribe{
-        width: 100%;
-        margin: 10vh 0;
-    }
+  .AllMiscellaneous_item {
+    width: 90%;
+  }
+  .AllMiscellaneous_rifht {
+    flex-direction: column;
+  }
+  .AllMiscellaneous_views {
+    width: 100%;
+  }
+  .AllMiscellaneous_Subscribe {
+    width: 100%;
+    margin: 10vh 0;
+  }
 }
