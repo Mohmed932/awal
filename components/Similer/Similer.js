@@ -6,7 +6,7 @@ import Link from "next/link";
 import SimilerLoading from "../Loading/SimilerLoading";
 
 const Similer = ({ id }) => {
-  const { dispatch, state, isDarkMode } = useContext(DataContext);
+  const { dispatch, state } = useContext(DataContext);
   const SimilerDataFetching = async () => {
     try {
       dispatch({ type: "LOADING", payload: null });

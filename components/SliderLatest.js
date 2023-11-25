@@ -1,11 +1,8 @@
 "use client";
 import Link from "next/link";
-import "../app/styles/SliderLatest.css";
+import "@/app/styles/SliderLatest.css";
 import SimpleSlider from "./SimpleSlider";
-import { DataContext } from "@/app/context";
-import { useContext } from "react";
 const SliderLatest = ({ last }) => {
-  const { isDarkMode} = useContext(DataContext);
   return (
     <div className="Slider">
       <div className="Slider_container">

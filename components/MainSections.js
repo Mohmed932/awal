@@ -1,11 +1,9 @@
-import React, { useCallback, useContext } from "react";
+import React, { useCallback } from "react";
 import "@/app/styles/Sections.css";
 import Link from "next/link";
 import LoadingOne from "./Loading/LoadingOne";
-import { DataContext } from "@/app/context";
 
 const MainSections = ({ NewsSection, loading, name, link }) => {
-  const { isDarkMode} = useContext(DataContext);
   const handleClick = useCallback(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -42,7 +40,11 @@ const MainSections = ({ NewsSection, loading, name, link }) => {
         <h3>{name}</h3>
       </div>
       <div className="Sections_items">
-        {loading==="loading"?<LoadingOne/>:NewsSection?.newsData.slice(3, 6).map(renderItem)}
+        {loading === "loading" ? (
+          <LoadingOne />
+        ) : (
+          NewsSection?.newsData.slice(3, 6).map(renderItem)
+        )}
       </div>
       <div className="Sections_items_link">
         <Link href={link}>وريني اكتر</Link>

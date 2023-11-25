@@ -1,12 +1,10 @@
 "use client";
 import Link from "next/link";
 import "@/app/styles/Miscellaneous.css";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import SimpleSlider from "./Views";
-import { DataContext } from "@/app/context";
 
 const Miscellaneous = ({ News, kind, NewsMiscellaneous, partOfUrl }) => {
-  const { isDarkMode } = useContext(DataContext);
   const [count, setcount] = useState(2);
   const [loading, setloading] = useState(false);
   const [data, setData] = useState(News || []);
@@ -26,9 +24,7 @@ const Miscellaneous = ({ News, kind, NewsMiscellaneous, partOfUrl }) => {
     }
   };
   return (
-    <div
-      className={isDarkMode ? "AllMiscellaneous dark-mode" : "AllMiscellaneous"}
-    >
+    <div className="AllMiscellaneous">
       <div className="AllMiscellaneous_container">
         <div className="AllMiscellaneous_left">
           <div className="AllMiscellaneous_left_line">

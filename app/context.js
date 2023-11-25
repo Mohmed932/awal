@@ -18,7 +18,6 @@ function dataReducer(state, action) {
 }
 
 export default function ThemeProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const InitialValue = {
     status: "loading",
     data: null,
@@ -61,8 +60,6 @@ export default function ThemeProvider({ children }) {
     state,
     dispatchSearch,
     stateSearch,
-    isDarkMode,
-    setIsDarkMode,
     dispatchArt,
     stateArt,
     dispatchCareers,

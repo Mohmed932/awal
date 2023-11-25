@@ -1,15 +1,12 @@
-"use client"
+"use client";
 import Slider from "react-slick";
 import "@/app/styles/Views.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
-import { useContext } from "react";
-import { DataContext } from "@/app/context";
 
 const SimpleSlider = ({ NewsMiscellaneous }) => {
-  const { isDarkMode} = useContext(DataContext);
   const CustomNextArrow = (props) => (
     <div onClick={props.onClick}>
       <AiOutlineArrowRight className="arrow_icons arrow_icons_next" />

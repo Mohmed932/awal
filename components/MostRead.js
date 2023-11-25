@@ -12,7 +12,7 @@ import Cricle from "./Loading/cricle";
 const MostRead = () => {
   const route = useRouter();
   const [slidesToShow, setSlidesToShow] = useState(3);
-  const { isDarkMode, dispatchViews, stateViews } = useContext(DataContext);
+  const { dispatchViews, stateViews } = useContext(DataContext);
   const handelMostRead = async () => {
     try {
       dispatchViews({ type: "LOADING", payload: null });
@@ -75,7 +75,7 @@ const MostRead = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className={isDarkMode ? "MostRead dark-mode" : "MostRead"}>
+    <div className="MostRead">
       {stateViews.status === "loading" ? (
         <Cricle />
       ) : (

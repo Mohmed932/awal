@@ -1,4 +1,3 @@
-"use client";
 import {
   FaShare,
   FaFacebookF,
@@ -8,11 +7,8 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import "@/app/styles/news.css";
-import { DataContext } from "@/app/context";
-import { useContext } from "react";
 
 const Scoial = ({ res, params }) => {
-  const { isDarkMode } = useContext(DataContext);
   const url = ` https://www.awalbawl.online/news/${params.id}`;
   const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   const twitter = `https://twitter.com/intent/tweet?url=${url}&text=${res?.title}`;
