@@ -1,3 +1,4 @@
+"use client";
 import {
   FaShare,
   FaFacebookF,

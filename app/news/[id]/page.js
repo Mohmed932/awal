@@ -1,8 +1,6 @@
 import "@/app/styles/news.css";
-// import { FaRegCopy } from "react-icons/fa";
 import Similer from "@/components/Similer/Similer";
 import Scoial from "@/components/scoial";
-// import toast from "react-hot-toast";
 
 export const generateMetadata = async ({ params }) => {
   const id = params.id;

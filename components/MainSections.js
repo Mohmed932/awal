@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback } from "react";
 import "@/app/styles/Sections.css";
 import Link from "next/link";

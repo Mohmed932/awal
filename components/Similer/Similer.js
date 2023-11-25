@@ -1,7 +1,7 @@
 "use client";
 import "@/app/styles/news.css";
 import { DataContext } from "@/app/context";
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Link from "next/link";
 import SimilerLoading from "../Loading/SimilerLoading";
 
