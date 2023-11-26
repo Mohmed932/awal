@@ -55,6 +55,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     }
   };
   const navigate = useRouter();
+  useEffect(() => {
+    handelStorage();
+  },[isDarkMode]);
   const item = (
     <div className="Navbar_main">
       <div className="logo" onClick={() => navigate.push("/")}>

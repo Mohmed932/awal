@@ -6,9 +6,9 @@ export const metadata = {
     "اول باول موقع أخباري متخصص في الوظائف والتوظيف. نقدم آخر الأخبار والمقالات والتحليلات حول عالم العمل",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "https://www.awalbawl.online/ios/16.png",
-    shortcut: "https://www.awalbawl.online/ios/16.png",
-    apple: "https://www.awalbawl.online/ios/16.png",
+    icon: "../16.png",
+    shortcut: "../16.png",
+    apple: "../16.png",
   },
   title: `أخبار السفر والسفارات والخدمات السياحية - تحديثات حصرية عن الوجهات المحلية والعالمية`,
   description:

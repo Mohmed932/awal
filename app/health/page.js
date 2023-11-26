@@ -6,9 +6,9 @@ export const metadata = {
     "الصحة,المحلية,العالمية,أخبار الصحة المحلية والعالمية,تحديثات الصحة,أحدث الأبحاث الطبية,مقالات عن الصحة والعافية,تحليلات الأمراض,أخبار الصحة في الوطن العربي,المشاكل الصحية الحالية,نصائح الصحة,تحديثات المستجدات الصحية",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "https://www.awalbawl.online/ios/16.png",
-    shortcut: "https://www.awalbawl.online/ios/16.png",
-    apple: "https://www.awalbawl.online/ios/16.png",
+    icon: "../16.png",
+    shortcut: "../16.png",
+    apple: "../16.png",
   },
   title: `أخبار الصحة المحلية والعالمية - تحديثات حصرية عن أحدث المستجدات والأبحاث الطبية`,
   description:

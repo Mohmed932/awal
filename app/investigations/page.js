@@ -6,9 +6,9 @@ export const metadata = {
     "موقع أخباري متخصص في التحقيقات والملفات المحلية والعالمية. نقدم آخر الأخبار والمقالات والتحليلات",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "https://www.awalbawl.online/ios/16.png",
-    shortcut: "https://www.awalbawl.online/ios/16.png",
-    apple: "https://www.awalbawl.online/ios/16.png",
+    icon: "../16.png",
+    shortcut: "../16.png",
+    apple: "../16.png",
   },
   title: `أخبار التحقيقات والملفات المحلية والعالمية - تحديثات حصرية عن الأخبار الحالية والتحقيقات الدقيقة`,
   description:

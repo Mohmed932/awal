@@ -30,7 +30,7 @@ const Similer = ({ id }) => {
         <div className="Main_Similer_news">
           <h2>اخبار متعلقة</h2>
           <div className="main_container_Similer">
-            {state.data.map(({ _id, title, more_details: { largeImage } }) => (
+            {state.data?.map(({ _id, title, more_details: { largeImage } }) => (
               <div className="Similer_news_container" key={_id}>
                 <div className="Similer_img_loader">
                   <img
