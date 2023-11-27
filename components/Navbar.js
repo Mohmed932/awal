@@ -198,7 +198,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           للاعلان
         </a>
         {isDarkMode ? (
-          <BsFillMoonFill onClick={handelStorage} />
+          <BsFillMoonFill onClick={handelStorage} className="icon_mode"/>
         ) : (
           <BsFillSunFill onClick={handelStorage} />
         )}

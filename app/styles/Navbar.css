@@ -191,17 +191,7 @@
   background-color: var(--main-color);
   color: var(--background-color);
 }
-.time {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  letter-spacing: 2px;
-}
-.time h4 {
-  margin: 0 20px;
-  color: #fff;
-}
-.forAds a {
+.forAds a,.icon_mode {
   color: #fff;
 }
 .btn {
