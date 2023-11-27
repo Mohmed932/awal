@@ -5,7 +5,8 @@
   --text-color: #292828;
   --main-color: rgb(58, 58, 192);
   --two-colors: #3d3d3d;
-  --cute-color: #f00;
+  --cute-color: #d8e5f4;
+  --cute-colo0r: #f00;
   --tricker-color: rgb(247, 247, 249, 0.6);
   --scrollbar-color: #d8e5f4;
   --scrollbar-thumb-color: #adccf0;
@@ -28,6 +29,7 @@
   --main-color: #345172;
   --two-colors: #9b9595;
   --cute-color: #111924;
+  --cute-colo0r: #111924;
   --tricker-color: rgba(0, 0, 0, 0.35);
 
   --scrollbar-color: #1c335c;

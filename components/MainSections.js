@@ -3,7 +3,6 @@ import React, { useCallback } from "react";
 import "@/app/styles/Sections.css";
 import Link from "next/link";
 import LoadingOne from "./Loading/LoadingOne";
-import Image from "next/image";
 
 const MainSections = ({ NewsSection, loading, name, link }) => {
   const handleClick = useCallback(() => {
@@ -22,14 +21,7 @@ const MainSections = ({ NewsSection, loading, name, link }) => {
           aria-label={title}
         >
           <div className="Sections_eachItem_image">
-            <Image
-              src={largeImage}
-              alt={title || "اول باول"}
-              loading="lazy"
-              height={100}
-              width={100}
-              quality={100}
-            />
+            <img src={largeImage} alt={title} loading="lazy" />
           </div>
           <div className="Sections_items_word">
             <span>{date}</span>

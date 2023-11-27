@@ -8,7 +8,6 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { DataContext } from "@/app/context";
 import { useRouter } from "next/navigation";
 import Cricle from "./Loading/cricle";
-import Image from "next/image";
 
 const MostRead = () => {
   const route = useRouter();
@@ -91,14 +90,11 @@ const MostRead = () => {
                   onClick={() => GoToSingleNews(_id)}
                 >
                   <div className="MostRead_item_image">
-                  <Image
-                        src={largeImage}
-                        alt={title || "اول باول"}
-                        loading="lazy"
-                        height={100}
-                        width={100}
-                        quality={100}
-                      />
+                    <img
+                      src={more_details.largeImage}
+                      alt={title}
+                      loading="lazy"
+                    />
                   </div>
                   <h1>{title}</h1>
                 </div>

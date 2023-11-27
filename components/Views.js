@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
-import Image from "next/image";
 
 const SimpleSlider = ({ NewsMiscellaneous }) => {
   const CustomNextArrow = (props) => (
@@ -36,14 +35,7 @@ const SimpleSlider = ({ NewsMiscellaneous }) => {
             ({ _id, title, more_details: { date, largeImage } }, idx) => (
               <div className="SimpleSlider_container" key={idx}>
                 <div className="Latestnews_views_img_loading">
-                  <Image
-                    src={largeImage}
-                    alt={title || "اول باول"}
-                    loading="lazy"
-                    height={100}
-                    width={100}
-                    quality={100}
-                  />
+                  <img src={largeImage} alt={title} loading="lazy" />
                 </div>
                 <Link
                   href={`/news/${_id}`}
