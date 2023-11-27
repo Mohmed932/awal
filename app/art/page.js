@@ -6,9 +6,9 @@ export const metadata = {
     "اول باول موقع أخباري متخصص في الفن والفنانين والسينما. نقدم آخر الأخبار والمقالات والتحليلات حول عالم",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "../16.png",
-    shortcut: "../16.png",
-    apple: "../16.png",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+    apple: "./icon.png",
   },
   title: "أخبار الفن والسينما - تحديثات حصرية عن فنانين مشهورين وأحدث أفلامهم",
   description:

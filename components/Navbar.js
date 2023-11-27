@@ -57,12 +57,12 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const navigate = useRouter();
   useEffect(() => {
     handelStorage();
-  },[isDarkMode]);
+  }, [isDarkMode]);
   const item = (
     <div className="Navbar_main">
       <div className="logo" onClick={() => navigate.push("/")}>
         <span>A</span>
-        <span>A</span>
+        <span>B</span>
       </div>
       <div className="Navbar_item">
         <div className="Sidebar">
@@ -198,7 +198,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           للاعلان
         </a>
         {isDarkMode ? (
-          <BsFillMoonFill onClick={handelStorage} className="icon_mode"/>
+          <BsFillMoonFill onClick={handelStorage} className="icon_mode" />
         ) : (
           <BsFillSunFill onClick={handelStorage} />
         )}

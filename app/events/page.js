@@ -6,9 +6,9 @@ export const metadata = {
     "موقع أخباري متخصص في تغطية أحداث الكوارث والمصائب، بما في ذلك الأحداث المحلية والعالمية",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "../16.png",
-    shortcut: "../16.png",
-    apple: "../16.png",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+    apple: "./icon.png",
   },
   title: `أخبار الكوارث والمصائب الطبيعية - تحديثات حصرية عن الأحداث المحلية والعالمية`,
   description:

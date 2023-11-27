@@ -75,13 +75,16 @@ body {
 .logo span {
   display: block;
   font-size: 40px;
+  user-select: none;
 }
 .logo span:nth-child(2) {
   color: var(--text-color);
 }
 .logo span:nth-child(2) {
   color: red;
-  transform: rotate(12deg);
+  margin-left: -6px;
+  margin-top: -4px;
+  transform: rotate(-12deg);
 }
 
 @keyframes wave {

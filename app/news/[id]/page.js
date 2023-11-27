@@ -12,6 +12,11 @@ export const generateMetadata = async ({ params }) => {
     description: res.more_details.one,
     themeColor: "black",
     canonical: `https://www.awalbawl.online/news/${id}`,
+    icons: {
+      icon: "./icon.png",
+      shortcut: "./icon.png",
+      apple: "./icon.png",
+    },
     openGraph: {
       title: res.title,
       description: res.more_details.one,
@@ -21,8 +26,7 @@ export const generateMetadata = async ({ params }) => {
     },
   };
 };
-
-const SingleNews = async ({ params }) => {
+const page = async ({ params }) => {
   const req = await fetch(
     `https://serverawalbawl.vercel.app/news/${params.id}`
   );
@@ -77,4 +81,4 @@ const SingleNews = async ({ params }) => {
   );
 };
 
-export default SingleNews;
+export default page;

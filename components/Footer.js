@@ -39,7 +39,7 @@ const Footer = memo(() => {
           </a>
           <div className="logo" onClick={() => navigate.push("/")}>
             <span>A</span>
-            <span>A</span>
+            <span>B</span>
           </div>
         </div>
         <div className="Footer_alinks">

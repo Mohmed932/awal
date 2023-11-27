@@ -6,9 +6,9 @@ export const metadata = {
     "موقع أخباري متخصص في مجال التكنولوجيا. نقدم آخر الأخبار والمقالات والتحليلات حول عالم التقنية التكنولوجيا",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "../16.png",
-    shortcut: "../16.png",
-    apple: "../16.png",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+    apple: "./icon.png",
   },
   title: `أخبار التكنولوجيا - تحديثات حصرية عن أحدث التقنيات والابتكارات`,
   description:

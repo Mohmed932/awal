@@ -6,9 +6,9 @@ export const metadata = {
     "موقع أخباري متخصص في تغطية أحدث الأخبار والأحداث في العالم العربي. نقدم تحديثات حصرية حول أخبار العرب",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "../16.png",
-    shortcut: "../16.png",
-    apple: "../16.png",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+    apple: "./icon.png",
   },
   title: `أخبار العالم العربي - تحديثات حصرية عن أحدث الأخبار والأحداث العربية`,
   description:

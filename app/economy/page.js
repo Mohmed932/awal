@@ -6,9 +6,9 @@ export const metadata = {
     "موقع أخباري متخصص في الاقتصاد والأخبار المالية. نقدم آخر التحديثات والمقالات والتحليلات حول الاقتصاد",
   metadataBase: new URL("https://www.awalbawl.online"),
   icons: {
-    icon: "../16.png",
-    shortcut: "../16.png",
-    apple: "../16.png",
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+    apple: "./icon.png",
   },
   title: `أخبار الاقتصاد المحلي والعالمي - تحديثات حصرية عن التطورات الاقتصادية والأخبار المالية`,
   description:
