@@ -30,6 +30,11 @@ export const metadata = {
   description:
     "موقع اول باول الاخباري يقدم احدث واهم اخبار مصر على مدار اليوم كما نقدم اهم اخبار الرياضة والفن والاقتصاد والحوادث",
   canonical: `https://www.awalbawl.online/`,
+  // verification: {
+  //   google: 'i2ArtRmQilMpo20id0ITjX35B_r_1CfQ10adVpq-Hbk',
+  //   yandex: 'yandex',
+  //   yahoo: 'yahoo',
+  // },
   openGraph: {
     title: "أول بأول- ناقل اخباري",
     description:

@@ -54,6 +54,7 @@
 }
 .AllMiscellaneous_items .AllMiscellaneous_item a {
   color: var(--text-color);
+  background-color: yellowgreen;
 }
 .AllMiscellaneous_item_img {
   width: 100%;

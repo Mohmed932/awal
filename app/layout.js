@@ -5,7 +5,6 @@ import "./globals.css";
 import { Alexandria } from "next/font/google";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
-import Script from "next/script";
 const inter = Alexandria({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
