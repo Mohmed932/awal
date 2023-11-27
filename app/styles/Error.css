@@ -1,0 +1,68 @@
+.PageNotFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PageNotFound_container{
+    width: 60%;
+    height: 60vh;
+    margin: 5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 70px 0;
+    text-align: center;
+}
+.PageNotFound_button{
+    background-color:var(--cute-color);
+    border: none;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+}
+.PageNotFound_container h1{
+    color: var(--text-color);
+}
+.PageNotFound_container p{
+    color: var(--desc-color);
+    margin: 10px 0;
+}
+.PageNotFound_btns{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5vh 0;
+}
+.PageNotFound_try{
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+@media (max-width:1000px) {
+    .PageNotFound_container{
+        width: 90%;
+    }
+}
+@media (max-width:600px) {
+    .PageNotFound_container{
+        width: 90%;
+    }
+    .PageNotFound_container h1{
+        font-size: 20px;
+    }
+    .PageNotFound_container p{
+        font-size: 15px;
+    }
+    .PageNotFound_btns{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}

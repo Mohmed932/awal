@@ -4,16 +4,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "vid.alarabiya.net",
-      },
-      {
-        protocol: "https",
-        hostname: "vetogate.com/",
-      },
-      {
-        protocol: "https",
-        hostname: "elbalad.news/",
-      },
+        hostname: "*",
+      }
     ],
   },
 };

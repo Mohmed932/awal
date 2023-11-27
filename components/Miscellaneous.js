@@ -3,6 +3,7 @@ import Link from "next/link";
 import "@/app/styles/Miscellaneous.css";
 import { useState } from "react";
 import SimpleSlider from "./Views";
+import Image from "next/image";
 
 const Miscellaneous = ({ News, kind, NewsMiscellaneous, partOfUrl }) => {
   const [count, setcount] = useState(2);
@@ -36,7 +37,14 @@ const Miscellaneous = ({ News, kind, NewsMiscellaneous, partOfUrl }) => {
                 ({ _id, title, more_details: { date, largeImage } }, idx) => (
                   <div className="AllMiscellaneous_item" key={idx}>
                     <div className="AllMiscellaneous_item_img">
-                      <img src={largeImage} alt={title} loading="lazy" />
+                      <Image
+                        src={largeImage}
+                        alt={title || "اول باول"}
+                        loading="lazy"
+                        height={100}
+                        width={100}
+                        quality={100}
+                      />
                     </div>
                     <Link
                       href={`/news/${_id}`}

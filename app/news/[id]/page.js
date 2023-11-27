@@ -1,6 +1,7 @@
 import "@/app/styles/news.css";
 import Similer from "@/components/Similer/Similer";
 import Scoial from "@/components/scoial";
+import Image from "next/image";
 
 export const generateMetadata = async ({ params }) => {
   const id = params.id;
@@ -21,7 +22,7 @@ export const generateMetadata = async ({ params }) => {
     },
   };
 };
-
+const yx = `100%`
 const SingleNews = async ({ params }) => {
   const req = await fetch(
     `https://serverawalbawl.vercel.app/news/${params.id}`
@@ -37,13 +38,14 @@ const SingleNews = async ({ params }) => {
         <span className="Single_news_kind">{res.kind}</span>
         <span>{res.more_details.date}</span>
         <div className="img_loading">
-          <img
+          <Image             
             src={res.more_details.largeImage}
             alt={res.title || "اول باول"}
             loading="lazy"
-            width={100}
             height={100}
-          />
+            width={100}
+            quality={100}
+            />
         </div>
         <button
           className="Single_share"

@@ -1,6 +1,8 @@
 'use client' // Error components must be Client Components
 
 import { useEffect } from 'react'
+import Link from 'next/link'
+import '@/app/styles/Error.css'
 
 export default function Error({ error, reset }) {
     useEffect(() => {
@@ -9,16 +11,18 @@ export default function Error({ error, reset }) {
     }, [error])
 
     return (
-        <div>
-            <h2>Something went wrong!</h2>
-            <button
-                onClick={
-                    // Attempt to recover by trying to re-render the segment
-                    () => reset()
-                }
-            >
-                Try again
-            </button>
+        <div className='PageNotFound'>
+            <div className='PageNotFound_container'>
+                <button className='PageNotFound_button'>خطأ 500</button>
+                <h1>حدث خطأ ما</h1>
+                <p>حدث خطأ ما سيتم اصلاحه في اقرب وقت ممكن</p>
+                <div className='PageNotFound_btns'>
+                    <Link href='/'>
+                        <button className='PageNotFound_button'>العوده الي الصفحه الرئيسيه</button>
+                    </Link>
+                    <button className='PageNotFound_try' onClick={() => reset()}>اعاده المحاوله</button>
+                </div>
+            </div>
         </div>
     )
 }

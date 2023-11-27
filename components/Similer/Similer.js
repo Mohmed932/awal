@@ -4,6 +4,7 @@ import { DataContext } from "@/app/context";
 import { useContext, useEffect } from "react";
 import Link from "next/link";
 import SimilerLoading from "../Loading/SimilerLoading";
+import Image from "next/image";
 
 const Similer = ({ id }) => {
   const { dispatch, state } = useContext(DataContext);
@@ -33,12 +34,13 @@ const Similer = ({ id }) => {
             {state.data?.map(({ _id, title, more_details: { largeImage } }) => (
               <div className="Similer_news_container" key={_id}>
                 <div className="Similer_img_loader">
-                  <img
+                  <Image
                     src={largeImage}
                     alt={title || "اول باول"}
                     loading="lazy"
+                    height={100}
                     width={100}
-                    height={200}
+                    quality={100}
                   />
                 </div>
                 <Link href={`/news/${_id}`}>
